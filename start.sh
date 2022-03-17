@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# /laravel.sh
+/laravel.sh
 
 
 # Update nginx to match worker_processes to no. of cpu's

@@ -8,7 +8,6 @@ COPY ./supervisord.conf /etc/supervisord.conf
 COPY ./default.conf /etc/nginx/conf.d/default.conf
 # Override default nginx welcome page
 
-# RUN git clone https://github.com/minami-uetani/laravel8_tah ./laravel
 # COPY ./laravel /usr/share/nginx/html
 
 COPY ./start.sh /start.sh

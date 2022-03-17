@@ -7,8 +7,8 @@ rm -rf .*
 rm -rf *
 
 # larave install
-# composer create-project --prefer-dist laravel/laravel .
-git clone https://github.com/minami-uetani/laravel8_tah .
+composer create-project --prefer-dist laravel/laravel .
+# git clone https://github.com/minami-uetani/laravel8_tah .
 
 echo "Runnning yarn production..."
 yarn
