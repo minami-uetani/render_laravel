@@ -2,8 +2,8 @@
 ls
 cd /usr/share/nginx/html
 
-rm -rf *.*
-rm -rf .*
+# rm -rf *.*
+# rm -rf .*
 rm -rf *
 
 # larave install
