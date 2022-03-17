@@ -10,9 +10,9 @@ rm -rf *
 # composer create-project --prefer-dist laravel/laravel .
 git clone https://github.com/minami-uetani/laravel8_tah .
 
-# echo "Runnning yarn production..."
-# yarn
-# yarn production
+echo "Runnning yarn production..."
+yarn
+yarn production
 
 # rm -rf ./node_modules
 # rm -rf ./package.json
