@@ -12,7 +12,7 @@ COPY ./default.conf /etc/nginx/conf.d/default.conf
 
 COPY ./start.sh /start.sh
 COPY ./laravel.sh /laravel.sh
-CMD ["/start.sh"]
+# CMD ["/start.sh"]
 
 #CMD ["/laravel.sh && /strt.sh"]
 #CMD ["/start.sh"]
