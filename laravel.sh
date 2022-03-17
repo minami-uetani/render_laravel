@@ -7,12 +7,12 @@ rm -rf .*
 rm -rf *
 
 # larave install
-# composer create-project --prefer-dist laravel/laravel .
-git clone https://github.com/minami-uetani/laravel8_tah .
+composer create-project --prefer-dist laravel/laravel .
+# git clone https://github.com/minami-uetani/laravel8_tah .
 
-echo "Runnning yarn production..."
-yarn
-yarn production
+# echo "Runnning yarn production..."
+# yarn
+# yarn production
 
 # rm -rf ./node_modules
 # rm -rf ./package.json
@@ -28,7 +28,7 @@ echo "Caching routes..."
 php artisan route:cache
 
 echo "Running migrations..."
-#php artisan migrate --force
+php artisan migrate --force
 
 cp .env.example .env
 php artisan key:generate
