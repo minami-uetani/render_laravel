@@ -1,0 +1,39 @@
+version: "3.8"
+services:
+  backend:
+    container_name: laravel
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./laravel:/usr/share/nginx/html
+      # - enlive-vendor:/usr/share/nginx/html/vendor
+      # - ./backend/docker-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+      # depends_on:
+      # - db
+    # environment:
+      # - DB_CONNECTION=${DB_CONNECTION:-pgsql}
+      # - DB_HOST=db
+      # - DB_PORT=${DB_PORT:-5432}
+      # - DB_DATABASE=${DB_NAME:-laravel}
+      # - DB_USERNAME=${DB_USER:-laravel}
+      # - DB_PASSWORD=${DB_PASS:-password}
+      # - MAIL_HOST=${MAIL_HOST:-mailhog}
+      # - MAIL_PORT=${MAIL_PORT:-1025}
+      # - MAIL_FROM_ADDRESS=${MAIL_FROM_ADDRESS:-info@example.com}
+      # - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID:-minioadminuser}
+      # - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY:-minioadminpassword}
+      # - AWS_URL=${AWS_URL:-http://10.211.55.5:9000}
+      # - AWS_ENDPOINT=${AWS_ENDPOINT:-http://10.211.55.5:9000}
+      # - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION:-ap-northeast-1}
+      # - AWS_BUCKET=${AWS_BUCKET:-test}
+      # - AWS_PATH_STYLE_ENDPOINT=${AWS_PATH_STYLE_ENDPOINT:-true}
+    networks:
+      - app
+
+networks:
+  app:
+    driver: bridge
